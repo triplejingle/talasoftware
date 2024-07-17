@@ -64,7 +64,6 @@ export default function Page() {
             <div className="mt-2.5">
               <input
                 id="first-name"
-                name="first-name"
                 type="text"
                 autoComplete="given-name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"
@@ -78,7 +77,6 @@ export default function Page() {
             <div className="mt-2.5">
               <input
                 id="last-name"
-                name="last-name"
                 type="text"
                 autoComplete="family-name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"
@@ -93,9 +91,7 @@ export default function Page() {
             </label>
             <div className="mt-2.5">
               <input
-
                 id="email"
-                name="email"
                 type="email"
                 autoComplete="email"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"
@@ -112,7 +108,6 @@ export default function Page() {
             <div className="mt-2.5">
               <textarea
                 id="message"
-                name="message"
                 rows={4}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"
                 {...register("message")}
