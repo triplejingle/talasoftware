@@ -12,7 +12,7 @@ interface DownloadFileButton{
   href:string;
 }
 export function DownloadFileButton(props: DownloadFileButton){
-  return (<Link className={"rounded-full  border hover:border-teal-300 text-cyan-500 hover:text-teal-300 px-5"} href={props.href}>{props.text}</Link>)
+  return (<a className={"rounded-full  border hover:border-teal-300 text-cyan-500 hover:text-teal-300 px-5"} href={props.href} download>{props.text}</a>)
 }
 
 interface NavBarButton{
