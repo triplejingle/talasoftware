@@ -21,7 +21,7 @@ const navigation = [
 export function NavBar() {
   const pathname = usePathname()
   const router = useRouter();
-  function navigate(href){
+  function navigate(href:string){
     router.push(href);
   }
   return <div className={"top-0 sticky z-999 bg-white"}>
