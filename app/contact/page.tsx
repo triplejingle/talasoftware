@@ -55,15 +55,15 @@ export default function Page() {
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl">Contact me</h2>
       </div>
-      <form onSubmit={handleSubmit(onSubmit)} ref={form} className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form id={"myForm"} onSubmit={handleSubmit(onSubmit)} ref={form} className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
-            <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-black">
+            <label htmlFor="firstName" className="block text-sm font-semibold leading-6 text-black">
               First name
             </label>
             <div className="mt-2.5">
               <input
-                id="first-name"
+                id="firstName"
                 type="text"
                 autoComplete="given-name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"
@@ -71,12 +71,12 @@ export default function Page() {
             </div>
           </div>
           <div>
-            <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-black">
+            <label htmlFor="lastName" className="block text-sm font-semibold leading-6 text-black">
               Last name
             </label>
             <div className="mt-2.5">
               <input
-                id="last-name"
+                id="lastName"
                 type="text"
                 autoComplete="family-name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"
@@ -141,6 +141,13 @@ export default function Page() {
           <ToastContainer/>
         </div>
         <div className="mt-10">
+          <button
+
+            type="submit"
+            className="block w-full rounded-md bg-teal-300 px-3.5 py-2.5 text-center text-sm font-semibold text-black shadow-sm hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
+          >
+            Send
+          </button>
           {!isSubmitted ? <button
               disabled={isSubmitted}
               type="submit"
