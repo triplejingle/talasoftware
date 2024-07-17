@@ -9,6 +9,8 @@ import {Bounce, toast, ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 interface ContactProps {
+  firstName: string,
+  lastName:string
   email: string;
   message: string;
 }
@@ -16,6 +18,8 @@ interface ContactProps {
 const schema = yup
   .object()
   .shape({
+    firstName: yup.string(),
+    lastName: yup.string(),
     email: yup.string().required("please enter your email"),
     message: yup.string().required("contacting me without sending a message he?"),
   })
@@ -26,10 +30,11 @@ export default function Page() {
   const {
     register,
     handleSubmit,
-    formState: {errors, isDirty, isSubmitted}
-  } = useForm<ContactProps>({resolver: yupResolver(schema), mode: "onChange"})
+    reset,
+    formState: {errors,   isDirty, isSubmitted}
+  } = useForm<ContactProps>({resolver: yupResolver(schema), mode: "onChange", defaultValues:{firstName:"", lastName:"", email:"", message:""}})
 
-  const onSubmit: SubmitHandler<ContactProps> = () => {
+  const onSubmit: SubmitHandler<ContactProps> = (data) => {
     emailjs
       .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID!, process.env.NEXT_PUBLIC_TEMPLATE_ID!, form?.current, {
         publicKey: process.env.NEXT_PUBLIC_MAIL_PUBLIC_KEY!,
@@ -47,6 +52,8 @@ export default function Page() {
             theme: "light",
             transition: Bounce,
           });
+          reset(data);
+
         }
       );
   };
@@ -63,6 +70,7 @@ export default function Page() {
             </label>
             <div className="mt-2.5">
               <input
+                {...register("firstName")}
                 id="firstName"
                 type="text"
                 autoComplete="given-name"
@@ -76,6 +84,7 @@ export default function Page() {
             </label>
             <div className="mt-2.5">
               <input
+                {...register("lastName")}
                 id="lastName"
                 type="text"
                 autoComplete="family-name"
@@ -149,7 +158,7 @@ export default function Page() {
               Send
             </button> :
             <button
-              disabled={!isDirty || !!errors}
+              disabled={!isDirty}
               type="submit"
               className="block w-full rounded-md bg-cyan-400 px-3.5 py-2.5 text-center text-sm font-semibold text-black shadow-sm hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
             >
