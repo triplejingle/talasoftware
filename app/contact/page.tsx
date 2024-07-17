@@ -9,8 +9,8 @@ import {Bounce, toast, ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 interface ContactProps {
-  firstName: string,
-  lastName:string
+  firstName?: string,
+  lastName?:string
   email: string;
   message: string;
 }
