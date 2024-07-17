@@ -141,13 +141,6 @@ export default function Page() {
           <ToastContainer/>
         </div>
         <div className="mt-10">
-          <button
-
-            type="submit"
-            className="block w-full rounded-md bg-teal-300 px-3.5 py-2.5 text-center text-sm font-semibold text-black shadow-sm hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
-          >
-            Send
-          </button>
           {!isSubmitted ? <button
               disabled={isSubmitted}
               type="submit"
