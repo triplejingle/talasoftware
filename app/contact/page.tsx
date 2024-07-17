@@ -29,7 +29,7 @@ export default function Page() {
     formState: {errors, isDirty, isSubmitted}
   } = useForm<ContactProps>({resolver: yupResolver(schema), mode: "onChange"})
 
-  const onSubmit: SubmitHandler<ContactProps> = (e: ContactProps) => {
+  const onSubmit: SubmitHandler<ContactProps> = () => {
     emailjs
       .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID!, process.env.NEXT_PUBLIC_TEMPLATE_ID!, form?.current, {
         publicKey: process.env.NEXT_PUBLIC_MAIL_PUBLIC_KEY!,
