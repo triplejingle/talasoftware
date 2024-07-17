@@ -12,18 +12,18 @@ interface VerticalTimeLineProps{
 }
 export function VerticalTimeLine({sectionTitle,timelineElements}: VerticalTimeLineProps){
   return <><h2 className="text-4xl font-bold tracking-tight text-black sm:text-6xl pb-20">{sectionTitle}</h2><ol>
-    {timelineElements.map((timelineElement,i)=>
+    {timelineElements.map((timelineElement :TimeLineElement,i)=>
         <li key={i+timelineElement.cardTitle} className="border-l-2 border-cyan-300 -mb-10">
           {timelineElement.href?<a  href={timelineElement.href}>
-          <TimeLineCard timelineElement={timelineElement}/>
+          <TimeLineCard {...timelineElement}/>
           </a>:
             <a>
-            <TimeLineCard timelineElement={timelineElement}/></a>}
+            <TimeLineCard {...timelineElement} /></a>}
         </li>
     )}</ol></>
 }
 
-function TimeLineCard({timelineElement}: TimeLineElement){
+function TimeLineCard(timelineElement: TimeLineElement){
 
   return    <div><div className="bg-cyan-300 w-6 h-6 flex items-center justify-center rounded-full -ml-3.5">
     <svg aria-hidden="true" focusable="false" data-prefix="fas" className="text-black w-3 h-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
