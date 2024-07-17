@@ -148,7 +148,7 @@ function classNames(...classes: any) {
 export default function Page() {
   return <div className={""}>
     <div className={"flex flex-row justify-center"}>
-      <h1 className={" text-3xl font-bold tracking-tight text-cyan-400 sm:text-6xl"}>Skills</h1>
+      <h1 className={" text-3xl font-bold tracking-tight text-black sm:text-6xl"}>Skills</h1>
     </div>
     {/*<SkillsSection skills={skills} sectionTitle={"Architecture"}/>*/}
     <SkillsSection skills={backendSkills} sectionTitle={"Backend development"}/>
