@@ -31,8 +31,8 @@ export default function Page() {
 
   const onSubmit: SubmitHandler<ContactProps> = (e) => {
     emailjs
-      .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form?.current, {
-        publicKey: process.env.NEXT_PUBLIC_MAIL_PUBLIC_KEY,
+      .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID!, process.env.NEXT_PUBLIC_TEMPLATE_ID!, form?.current, {
+        publicKey: process.env.NEXT_PUBLIC_MAIL_PUBLIC_KEY!,
       })
       .then(
         () => {
