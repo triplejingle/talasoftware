@@ -60,7 +60,7 @@ export default function Page() {
 
   return (<div>
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl">Contact me</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-black sm:text-6xl">Contact me</h2>
       </div>
       <form id={"myForm"} onSubmit={handleSubmit(onSubmit)} ref={form} className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
