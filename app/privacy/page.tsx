@@ -47,7 +47,7 @@ export default function Page(){
         zijn voor bepaalde met de verwerking belaste personen die zijn betrokken bij de exploitatie
         van deze applicatie (beheer, verkoop, marketing, juridisch, systeembeheer) of door de Eigenaar
         als Gegevensverwerkers aangestelde externe partijen (zoals externe technische serviceproviders,
-        mailprogramma's, hostingproviders, IT-bedrijven, communicatiebureaus). De bijgewerkte lijst
+        mailprogramma &lsquo; s, hostingproviders, IT-bedrijven, communicatiebureaus). De bijgewerkte lijst
         van deze partijen kan te allen tijde bij de eigenaar worden aangevraagd.
       </p>
 
