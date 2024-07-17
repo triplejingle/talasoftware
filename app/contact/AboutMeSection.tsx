@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const files = [
   {
     title: 'Programming my bingo application',
@@ -36,7 +38,7 @@ export default function AboutMeSection() {
             {files.map((file,i) => (
               <li  key={i+file.source}>
                 <div className="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-yellow-500">
-                  <img alt="" src={file.source} className="pointer-events-none object-cover " />
+                  <Image  alt="" src={file.source} className="pointer-events-none object-cover " />
                 </div>
                 <p className="pointer-events-none  mt-2 block  text-sm font-medium text-black"> {file.title}</p>
                 {file.demoHref?<a className={"mt-2 block  text-sm font-medium text-gray-500"} href={file.demoHref}>

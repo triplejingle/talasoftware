@@ -195,7 +195,7 @@ function Skills(props: SkillsProps) {
         </div>
         <p className="flex justify-center mt-1 truncate text-sm text-wrap text-gray-300">{props.skill.experience}</p>
       </div>
-      {/*<img alt="" src={skill.skill} className="h-10 w-10 flex-shrink-0 rounded-full bg-gray-300" />*/}
+
     </div>
     <div>
       <div className="-mt-px flex divide-x divide-gray-200">

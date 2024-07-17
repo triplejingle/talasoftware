@@ -4,6 +4,7 @@ import {Dialog, DialogPanel} from '@headlessui/react'
 import {useState} from "react";
 import {Bars3Icon, XMarkIcon,} from '@heroicons/react/24/outline'
 import {usePathname, useRouter} from "next/navigation";
+import Image from "next/image";
 
 
 const navigation = [
@@ -69,7 +70,7 @@ function MobileNavBar() {
         <div className="flex items-center justify-between">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img
+            <Image
               alt=""
               src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
               className="h-8 w-auto"
