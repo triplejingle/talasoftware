@@ -4,18 +4,18 @@ import {getYears} from "@/utilities/dateHelpers";
 const frontendSkills = [
   {
     skill: 'React',
-    rating: 2,
+    rating: 3,
     experience: getYears("2022-01-01")
   },
   {
     skill: 'NextJS',
-    rating: 2,
+    rating: 3,
     experience: getYears("2022-01-01")
   },
 
   {
     skill: 'Redux',
-    rating: 2,
+    rating: 3,
     experience: getYears("2022-01-01")
   },
   {
@@ -30,12 +30,12 @@ const frontendSkills = [
   },
   {
     skill: 'Axios',
-    rating: 1,
+    rating: 3,
     experience: getYears("2022-01-01")
   },
   {
     skill: 'Tailwind',
-    rating: 2,
+    rating: 3,
     experience: getYears("2022-01-01")
   },
   {
@@ -53,24 +53,24 @@ const frontendSkills = [
 const backendSkills = [
   {
     skill: 'C#',
-    rating: 2,
+    rating: 4,
     experience: getYears("2021-06-01")
   },
   {
     skill: 'MVC',
-    rating: 2,
+    rating: 3,
     experience: getYears("2021-06-01")
   },
 
   {
     skill: '.NET Core',
-    rating: 2,
+    rating: 3,
     experience: getYears("2021-06-01")
   },
 
   {
     skill: 'Entity Framework',
-    rating: 2,
+    rating: 3,
     experience: getYears("2021-06-01")
   },
   {
@@ -93,17 +93,17 @@ const backendSkills = [
 const databaseSkills = [
   {
     skill: 'SQL',
-    rating: 2,
+    rating: 3,
     experience: getYears("2015-06-01")
   },
   {
     skill: 'Triggers',
-    rating: 2,
+    rating: 3,
     experience: getYears("2015-06-01")
   },
   {
     skill: 'Stored procedure',
-    rating: 2,
+    rating: 3,
     experience: getYears("2015-06-01")
   }
 ]
@@ -111,7 +111,7 @@ const databaseSkills = [
 const devOpsSkills = [
   {
     skill: 'Azure devops',
-    rating: 2,
+    rating: 3,
     experience: getYears("2022-01-01")
   }
 ]
@@ -119,17 +119,17 @@ const devOpsSkills = [
 const toolsSkills = [
   {
     skill: 'Rider',
-    rating: 2,
+    rating: 3,
     experience: getYears("2022-01-01")
   },
   {
     skill: 'Webstorm',
-    rating: 2,
+    rating: 3,
     experience: getYears("2022-01-01")
   },
   {
     skill: 'Intellij',
-    rating: 2,
+    rating: 3,
     experience:  getYears("2016-06-01")
   }
 ]

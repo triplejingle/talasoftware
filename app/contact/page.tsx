@@ -41,7 +41,7 @@ export default function Page() {
       })
       .then(
         () => {
-          toast('Message send', {
+          toast('Met brie', {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -53,7 +53,6 @@ export default function Page() {
             transition: Bounce,
           });
           reset(data);
-
         }
       );
   };
