@@ -41,7 +41,7 @@ export default function Page() {
       })
       .then(
         () => {
-          toast('Met brie', {
+          toast('Send succesfullly', {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
