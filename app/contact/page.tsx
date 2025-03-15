@@ -44,7 +44,7 @@ export default function Page() {
       })
       .then(
         () => {
-          toast('Send succesfullly', {
+          toast('Succesvol verzonden', {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
