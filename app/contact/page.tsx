@@ -62,7 +62,7 @@ export default function Page() {
 
   return (<div>
       <div className="mx-auto max-w-2xl text-center">
-        <H1 className="font-bold text-gray-300">Vertel ons jouw idee!</H1>
+        <H1 className="font-bold text-gray-300">Vertel mij jouw idee!</H1>
       </div>
       <form id={"myForm"} onSubmit={handleSubmit(onSubmit)} ref={form} className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
