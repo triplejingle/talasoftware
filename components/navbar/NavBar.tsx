@@ -1,18 +1,15 @@
 'use client'
-import {NavBarbutton} from "@/components/uicomponents/buttons/PrimaryButtons";
 import {Dialog, DialogPanel} from '@headlessui/react'
 import React, {useEffect, useState} from "react";
 import {Bars3Icon, XMarkIcon,} from '@heroicons/react/24/outline'
 import {usePathname, useRouter} from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
 import {PrimaryLinkButton,TertiaryLinkButton,SecondaryLinkButton} from "@/components/uicomponents/buttons/LinkButton";
 
 
 const navigation = [
   {name: '(logo)', href: "/"},
   // {name: 'Over mij', href: '/about'},
-  {name: 'Software ontwikkeling', href: '/test'},
+  {name: 'Software ontwikkeling', href: '/softwareontwikkeling'},
   // {name: 'Team', href: '/projects'},
   // {name: 'Roadmap', href: '#'},
   // {name: 'Availability', href: '#'},

@@ -17,7 +17,7 @@ export default function Home() {
 
         <P className={"flex justify-around text-gray-300 "}>Freelance Software developer</P>
         <div className={"flex justify-around  my-20"}>
-              <PrimaryLinkButton href={"/test"} className={""}>
+              <PrimaryLinkButton href={"/softwareontwikkeling"} className={""}>
                 Software developer nodig?
               </PrimaryLinkButton>
               {/*<SecondaryLinkButton href={"/DjimaroTalahatuCV.docx"} className={"ml-2 px-5"}>*/}
