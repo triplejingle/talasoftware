@@ -4,9 +4,12 @@ import * as yup from "yup"
 import emailjs from '@emailjs/browser';
 import {SubmitHandler, useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
-import {useRef} from "react";
+import React, {useRef} from "react";
 import {Bounce, toast, ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import {PrimaryButton} from "@/components/uicomponents/buttons/Buttons";
+import {LabelTag} from "@/components/content/Label";
+import {H1} from "@/components/content/HTag";
 
 interface ContactProps {
   firstName?: string,
@@ -59,50 +62,49 @@ export default function Page() {
 
   return (<div>
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-black sm:text-6xl">Contact me</h2>
+        <H1 className="font-bold text-gray-400">Vertel ons jouw idee!</H1>
       </div>
       <form id={"myForm"} onSubmit={handleSubmit(onSubmit)} ref={form} className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
-            <label htmlFor="firstName" className="block text-sm font-semibold leading-6 text-black">
-              First name
-            </label>
+            <LabelTag htmlFor="firstName" className="block text-black">
+              Voornaam
+            </LabelTag>
             <div className="mt-2.5">
               <input
                 {...register("firstName")}
                 id="firstName"
                 type="text"
                 autoComplete="given-name"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-xl sm:leading-6"
               />
             </div>
           </div>
           <div>
-            <label htmlFor="lastName" className="block text-sm font-semibold leading-6 text-black">
-              Last name
-            </label>
+            <LabelTag htmlFor="lastName" className="block text-black">
+              Achternaam
+            </LabelTag>
             <div className="mt-2.5">
               <input
                 {...register("lastName")}
                 id="lastName"
                 type="text"
                 autoComplete="family-name"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-xl sm:leading-6"
               />
             </div>
           </div>
 
           <div className="sm:col-span-2">
-            <label htmlFor="email" className="block text-sm font-semibold leading-6 text-black">
+            <LabelTag htmlFor="email" className="block text-black">
               Email *
-
-            </label>
+            </LabelTag>
             <div className="mt-2.5">
               <input
                 id="email"
                 type="email"
                 autoComplete="email"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-xl sm:leading-6"
                 {...register("email")}
               />
               {errors.email ? <p className="text-red-500 text-xs italic">Please enter your email.</p> : <></>}
@@ -110,14 +112,14 @@ export default function Page() {
           </div>
 
           <div className="sm:col-span-2">
-            <label htmlFor="message" className="block text-sm font-semibold leading-6 text-black">
-              Message *
-            </label>
+            <LabelTag htmlFor="message" className="block text-black">
+              Bericht *
+            </LabelTag>
             <div className="mt-2.5">
               <textarea
                 id="message"
                 rows={4}
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-xl sm:leading-6"
                 {...register("message")}
               />
               {errors.message ? <p className="text-red-500 text-xs italic">Please enter a message.</p> : <></>}
@@ -137,7 +139,7 @@ export default function Page() {
           {/*      />*/}
           {/*    </Switch>*/}
           {/*  </div>*/}
-          {/*  <Label className="text-sm leading-6 text-gray-600">*/}
+          {/*  <Label className="text-xl leading-6 text-gray-600">*/}
           {/*    By selecting this, you agree to our{' '}*/}
           {/*    <a href="#" className="font-semibold text-yellow-600">*/}
           {/*      privacy&nbsp;policy*/}
@@ -148,18 +150,16 @@ export default function Page() {
 
           <ToastContainer/>
         </div>
-        <div className="mt-10">
-          {!isSubmitted ? <button
-              disabled={isSubmitted}
-              type="submit"
-              className="block w-full rounded-md bg-teal-300 px-3.5 py-2.5 text-center text-sm font-semibold text-black shadow-sm hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
-            >
-              Send
-            </button> :
+        <div className="mt-10 flex justify-end">
+          {!isSubmitted ?
+            <PrimaryButton disabled={isSubmitted} className={"block  rounded-full px-20 py-3 text-center text-xl font-semibold text-black shadow-sm"}>
+              Versturen
+            </PrimaryButton>
+            :
             <button
               disabled={!isDirty}
               type="submit"
-              className="block w-full rounded-md bg-cyan-400 px-3.5 py-2.5 text-center text-sm font-semibold text-black shadow-sm hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
+              className="block w-full rounded-full bg-amber-400 px-3.5 py-2.5 text-center text-xl font-semibold text-black shadow-sm hover:bg-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
             >
               Send again
             </button>}

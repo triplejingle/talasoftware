@@ -19,17 +19,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" >
-      <body className={inter.className }>
-        <div className={"h-screen flex flex-col justify-between"}>
-          <div className={"pt-5 "}>
+      <body className={inter.className +" bg-gray-100"}>
+        <div className={" flex flex-col justify-between  font-sans"}>
+          {/*<div className={" "}>*/}
           <NavBar/>
-            <div className={" md:mt-20"}>
+            <div className={"flex justify-center sm:pt-20 "}>
             {children}
             </div>
-          </div>
+          {/*</div>*/}
 
           <div  className={"w-full  "}>
-            <Footer/>
+            {/*<Footer/>*/}
           </div>
         </div>
       </body>
