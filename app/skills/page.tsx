@@ -187,7 +187,7 @@ export interface SkillsProps {
 }
 
 function Skills(props: SkillsProps) {
-  return <li key={props.skill.skill} className="col-span-1 divide-y divide-cyan-300 rounded-lg bg-white shadow">
+  return <li key={props.skill.skill} className="col-span-1 divide-y divide-cyan-300 rounded-lg bg-white shadow-sm">
     <div className="flex justify-between space-x-6 p-6">
       <div className="flex-1 truncate just">
         <div className="flex justify-center items-center space-x-3">
@@ -208,7 +208,7 @@ function Skills(props: SkillsProps) {
                 aria-hidden="true"
                 className={classNames(
                   props.skill.rating > rating ? 'text-yellow-400' : 'text-gray-200',
-                  'h-3 w-3 sm:h-5 sm:w-5 flex-shrink-0',
+                  'h-3 w-3 sm:h-5 sm:w-5 shrink-0',
                 )}
               />
             ))}

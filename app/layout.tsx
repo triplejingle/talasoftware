@@ -22,8 +22,8 @@ export default function RootLayout({
       <body className={inter.className +" bg-gray-100"}>
         <div className={" flex flex-col justify-between  font-sans"}>
           {/*<div className={" "}>*/}
-          <NavBar/>
-            <div className={"flex justify-center sm:pt-20 "}>
+            <NavBar/>
+            <div className={"flex justify-center pt-20 "}>
             {children}
             </div>
           {/*</div>*/}

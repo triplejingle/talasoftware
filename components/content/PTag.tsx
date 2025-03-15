@@ -1,10 +1,10 @@
 import React from "react";
 
-interface P1Props{
+interface PProps{
   children:React.ReactNode;
   className?: string;
 }
-export function P (props : P1Props){
+export function P (props : PProps){
   return <p className={"leading-6 text-xl line-length-sm "+ props?.className}>{props.children}</p>
 }
 

@@ -45,7 +45,7 @@ function TimeLineCard(timelineElement: TimeLineElement){
     </div>
     <p className="text-gray-700 mb-6">{timelineElement.description}</p>
     {/*do not remove added when projects are individually available as page.*/}
-    {/*<button type="button" className="inline-block px-4 py-1.5 bg-yellow-600 text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-700 hover:shadow-lg focus:bg-yellow-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true">Preview</button>*/}
-    {/*<button type="button" className="inline-block px-3.5 py-1 border-2 border-yellow-600 text-yellow-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true">See demo</button>*/}
+    {/*<button type="button" className="inline-block px-4 py-1.5 bg-yellow-600 text-black font-medium text-xs leading-tight uppercase rounded-sm shadow-md hover:bg-yellow-700 hover:shadow-lg focus:bg-yellow-700 focus:shadow-lg focus:outline-hidden focus:ring-0 active:bg-yellow-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true">Preview</button>*/}
+    {/*<button type="button" className="inline-block px-3.5 py-1 border-2 border-yellow-600 text-yellow-600 font-medium text-xs leading-tight uppercase rounded-sm hover:bg-black hover:bg-opacity-5 focus:outline-hidden focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true">See demo</button>*/}
   </div></div>
 }

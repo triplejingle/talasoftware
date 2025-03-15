@@ -1,5 +1,5 @@
 'use client'
-import {PrimaryButton} from "@/components/uicomponents/buttons/Buttons";
+import {PrimaryButton} from "@/components/uicomponents/buttons/PrimaryButtons";
 import React from "react";
 import Link from "next/link";
 import {H1, H2} from "@/components/content/HTag";
@@ -13,20 +13,20 @@ export default function Page() {
         className={"mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2  text-black"}>
         <div className="lg:pt-4 lg:pr-8">
           <div>
-            <H1 className={"pt-4 pb-8 font-bold "}>Van idee naar software oplossing</H1>
-            <H2 className={"mt-4 mb-2 font-bold"}>🎨💡 Idee </H2><br/>
+            <H2 className={"pt-4 pb-8 font-bold text-gray-300 "}>Van idee naar software oplossing</H2>
+            <H1 className={"mt-4 mb-2 font-bold"}>🎨💡 Idee </H1><br/>
             <P className={"mb-2 text-black "}>
               Het begint allemaal met een idee! Heb je een briljant plan en wil je weten of het haalbaar is? Wij
               denken met je mee, dagen je uit en kijken hoe we jouw idee kunnen omzetten in iets geweldigs.
             </P>
             <br/>
-            <H2 className={"mt-4 mb-2 font-bold"}>🤝🎉 Contact </H2><br/>
+            <H1 className={"mt-4 mb-2 font-bold"}>🤝🎉 Contact </H1><br/>
             <P className={"mb-2 text-black "}>
               Tijd om kennis te maken! In een gezellig gesprek kijken we samen naar jouw wensen en onze werkwijze. Jij
               leert ons kennen, wij leren jou kennen – zo leggen we een sterke basis voor een geweldige samenwerking.
             </P>
             <br/>
-            <H2 className={"mt-4 mb-2 font-bold"}>📝🕵️‍♂️ Wensen </H2><br/>
+            <H1 className={"mt-4 mb-2 font-bold"}>📝🕵️‍♂️ Wensen </H1><br/>
             <P className={"mb-2 text-black "}>
               De blauwdruk van jouw droomsoftware! We duiken in de details en bepalen precies wat er nodig is om jouw
               idee werkelijkheid te maken. Functionaliteiten, techniek en slimme oplossingen – we zetten alles op
@@ -34,7 +34,7 @@ export default function Page() {
             </P>
 
             <br/>
-            <H2 className={"mt-4 mb-2 font-bold"}>🚀🔥 Uitvoeren </H2><br/>
+            <H1 className={"mt-4 mb-2 font-bold"}>🚀🔥 Uitvoeren </H1><br/>
             <P className={"mb-2 text-black "}>
               Let’s go! We gaan all-in en starten met bouwen. Verwacht een rit vol innovatie, samenwerking en gewoon
               heel veel toffe resultaten. Stap voor stap brengen we jouw idee tot leven!
@@ -53,9 +53,11 @@ export default function Page() {
         </div>
       </div>
       <div className={"w-full mb-8 flex justify-center"}>
-        <PrimaryButton className={"py-4 px-8 mt-10"} >
-          <Link href={"/contact"}>Vertel ons je idee!</Link>
-        </PrimaryButton>
+        <Link href={"/contact"}>
+          <PrimaryButton className={"py-4 px-8 mt-10"} >
+            Vertel ons je idee!
+          </PrimaryButton>
+        </Link>
       </div>
     </div>
   </div>

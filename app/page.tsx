@@ -1,17 +1,29 @@
+'use client'
 
-import {DownloadFileButton, NavigationButton} from "@/components/uicomponents/buttons/Buttons";
+import {P} from "@/components/content/PTag";
+import {H1} from "@/components/content/HTag";
+import {PrimaryLinkButton} from "@/components/uicomponents/buttons/LinkButton";
 
 export default function Home() {
   return (
     <main >
-      <div className={"flex flex-col items-center text-black "}>
-        <p className={"font-bold text-black"} >
-          Hi there, i am  <b className={"text-cyan-400"}> Djimaro Talahatu</b>
-        </p>
-        <div className={"text-black"}> Software engineer & Full stack developer</div>
-        <div className={"flex justify-around md:w-1/3 my-20"} >
-          <NavigationButton text={"Let's meet"} href={"contact"}/>
-          <DownloadFileButton text={"Download resume"} href={"/DjimaroTalahatuCV.docx"}/>
+      <div className={"text-black "}>
+        <H1 className={"flex justify-around md:flex md:justify-around  font-bold text-black mb-1"}>
+         Hi,
+        </H1>
+        <H1 className={"flex justify-around md:flex md:justify-around font-bold text-black mb-4"}>
+         Ik ben Djimaro Talahatu
+        </H1>
+
+        <P className={"flex justify-around text-gray-300 "}>Freelance Software developer</P>
+        <div className={"flex justify-around  my-20"}>
+              <PrimaryLinkButton href={"/test"} className={""}>
+                Software developer nodig?
+              </PrimaryLinkButton>
+              {/*<SecondaryLinkButton href={"/DjimaroTalahatuCV.docx"} className={"ml-2 px-5"}>*/}
+              {/*  Download resume*/}
+              {/*</SecondaryLinkButton>*/}
+
         </div>
         {/*<div>Linked in</div>*/}
       </div>

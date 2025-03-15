@@ -7,8 +7,8 @@ import {yupResolver} from "@hookform/resolvers/yup";
 import React, {useRef} from "react";
 import {Bounce, toast, ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import {PrimaryButton} from "@/components/uicomponents/buttons/Buttons";
-import {LabelTag} from "@/components/content/Label";
+import {PrimaryButton} from "@/components/uicomponents/buttons/PrimaryButtons";
+import {LabelTag} from "@/components/content/LabelTag";
 import {H1} from "@/components/content/HTag";
 
 interface ContactProps {
@@ -23,7 +23,7 @@ const schema = yup
   .shape({
     firstName: yup.string(),
     lastName: yup.string(),
-    email: yup.string().required("please enter your email"),
+    email: yup.string().required("voer hier je email in"),
     message: yup.string().required("contacting me without sending a message he?"),
   })
   .required()
@@ -62,7 +62,7 @@ export default function Page() {
 
   return (<div>
       <div className="mx-auto max-w-2xl text-center">
-        <H1 className="font-bold text-gray-400">Vertel ons jouw idee!</H1>
+        <H1 className="font-bold text-gray-300">Vertel ons jouw idee!</H1>
       </div>
       <form id={"myForm"} onSubmit={handleSubmit(onSubmit)} ref={form} className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -76,7 +76,7 @@ export default function Page() {
                 id="firstName"
                 type="text"
                 autoComplete="given-name"
-                className="block w-full rounded-xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-xl sm:leading-6"
+                className="block w-full rounded-xl border-0 px-3.5 py-2 text-black shadow-xs ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-xl sm:leading-6"
               />
             </div>
           </div>
@@ -90,7 +90,7 @@ export default function Page() {
                 id="lastName"
                 type="text"
                 autoComplete="family-name"
-                className="block w-full rounded-xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-xl sm:leading-6"
+                className="block w-full rounded-xl border-0 px-3.5 py-2 text-black shadow-xs ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-xl sm:leading-6"
               />
             </div>
           </div>
@@ -104,10 +104,10 @@ export default function Page() {
                 id="email"
                 type="email"
                 autoComplete="email"
-                className="block w-full rounded-xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-xl sm:leading-6"
+                className="block w-full rounded-xl border-0 px-3.5 py-2 text-black shadow-xs ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-xl sm:leading-6"
                 {...register("email")}
               />
-              {errors.email ? <p className="text-red-500 text-xs italic">Please enter your email.</p> : <></>}
+              {errors.email ? <p className="text-red-500 text-xs italic">Voer hier je email in.</p> : <></>}
             </div>
           </div>
 
@@ -119,10 +119,10 @@ export default function Page() {
               <textarea
                 id="message"
                 rows={4}
-                className="block w-full rounded-xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-xl sm:leading-6"
+                className="block w-full rounded-xl border-0 px-3.5 py-2 text-black shadow-xs ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-xl sm:leading-6"
                 {...register("message")}
               />
-              {errors.message ? <p className="text-red-500 text-xs italic">Please enter a message.</p> : <></>}
+              {errors.message ? <p className="text-red-500 text-xs italic">Voer hier je bericht in.</p> : <></>}
             </div>
           </div>
           {/*<Field className="flex gap-x-4 sm:col-span-2">*/}
@@ -130,12 +130,12 @@ export default function Page() {
           {/*    <Switch*/}
           {/*      checked={agreed}*/}
           {/*      onChange={setAgreed}*/}
-          {/*      className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600 data-[checked]:bg-yellow-600"*/}
+          {/*      className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600 data-checked:bg-yellow-600"*/}
           {/*    >*/}
           {/*      <span className="sr-only">Agree to policies</span>*/}
           {/*      <span*/}
           {/*        aria-hidden="true"*/}
-          {/*        className="h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out group-data-[checked]:translate-x-3.5"*/}
+          {/*        className="h-4 w-4 transform rounded-full bg-white shadow-xs ring-1 ring-gray-900/5 transition duration-200 ease-in-out group-data-checked:translate-x-3.5"*/}
           {/*      />*/}
           {/*    </Switch>*/}
           {/*  </div>*/}
@@ -152,17 +152,15 @@ export default function Page() {
         </div>
         <div className="mt-10 flex justify-end">
           {!isSubmitted ?
-            <PrimaryButton disabled={isSubmitted} className={"block  rounded-full px-20 py-3 text-center text-xl font-semibold text-black shadow-sm"}>
+            <PrimaryButton disabled={isSubmitted} className={" px-10 py-3 text-center  text-black shadow-xs"}>
               Versturen
             </PrimaryButton>
             :
-            <button
-              disabled={!isDirty}
-              type="submit"
-              className="block w-full rounded-full bg-amber-400 px-3.5 py-2.5 text-center text-xl font-semibold text-black shadow-sm hover:bg-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
-            >
-              Send again
-            </button>}
+            <PrimaryButton disabled={!isDirty} className={"  px-10 py-3 text-center  text-black shadow-xs"}>
+              Opnieuw versturen
+            </PrimaryButton>
+
+          }
         </div>
       </form>
     </div>

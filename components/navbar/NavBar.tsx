@@ -1,11 +1,12 @@
 'use client'
-import {NavBarbutton, PrimaryButton, SecondaryButton} from "@/components/uicomponents/buttons/Buttons";
+import {NavBarbutton} from "@/components/uicomponents/buttons/PrimaryButtons";
 import {Dialog, DialogPanel} from '@headlessui/react'
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Bars3Icon, XMarkIcon,} from '@heroicons/react/24/outline'
 import {usePathname, useRouter} from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import {PrimaryLinkButton,TertiaryLinkButton,SecondaryLinkButton} from "@/components/uicomponents/buttons/LinkButton";
 
 
 const navigation = [
@@ -20,39 +21,45 @@ const navigation = [
 
 export function NavBar() {
   const pathname = usePathname()
-  const router = useRouter();
 
-  function navigate(href: string) {
-    router.push(href);
-  }
-    return <div className={"top-0 sticky z-0 bg-gray-200  md:py-5"}>
+  return <div className={"top-0 sticky z-0 bg-gray-200  md:py-5"}>
     <div className={"md:flex md:justify-between  md:mx-16 "}>
       <div className={"mr-5 md:flex hidden items-center"}>
         {navigation.map((url) =>
-
-            <NavBarbutton key={url.name} text={url.name} href={url.href} pathname={pathname} onClick={() => navigate(url.href)}/>
-
+          <div key={url.name}>
+          {pathname==url.href?
+            <SecondaryLinkButton href={url.href} className={"mr-12"}>
+              {url.name}
+            </SecondaryLinkButton> :
+            <TertiaryLinkButton href={url.href} className={"mr-12"}>
+              {url.name}
+            </TertiaryLinkButton>}
+          </div>
         )}
       </div>
-      <div className={" "}>
-        <SecondaryButton className={" hidden md:block  px-4 py-2 hover:bg-amber-500 hover:text-white"}>
-          <Link href="/contact">Contact</Link>
-        </SecondaryButton>
-      </div>
+      <TertiaryLinkButton key={"-1"} href="/contact" className={" hidden md:block"}>
+        Contact
+      </TertiaryLinkButton>
       <MobileNavBar/>
     </div>
   </div>
-    }
+  }
 
 
     function MobileNavBar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const router = useRouter();
     function navigate(href:string){
-    router.push(href);
-  }
-    const pathname = usePathname()
-    return <div className={" block md:hidden "}>
+      router.push(href);
+    }
+
+    const pathname = usePathname();
+      useEffect(() => {
+        if(mobileMenuOpen){
+          setMobileMenuOpen(false)
+        }
+      },[pathname])
+    return <div className={" block md:hidden w-full"}>
     <div className={"flex justify-end justify-items-center my-6 mr-6"}>
       <button
         type="button"
@@ -69,9 +76,9 @@ export function NavBar() {
       </a>
     </div>
     <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden ">
-      <div className="fixed inset-0 z-50 bg-gray-300"/>
+      <div className="fixed inset-0 "/>
       <DialogPanel
-        className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto  px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto  px-6 py-6 sm:ring-1 sm:ring-gray-900/10 bg-gray-200">
         <div className="flex items-center justify-between">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
@@ -94,12 +101,25 @@ export function NavBar() {
         </div>
         <div className="mt-6 flow-root">
           <div className="-my-6 divide-y divide-gray-500/10">
-            <div className="space-y-2 py-6">
+            <div className="space-y-2 py-6 flex-col ">
               {navigation.map((url) =>
-                <div className={"mr-12 visible md:invisible"} key={url.name}>
-                  <NavBarbutton text={url.name} href={url.href} pathname={pathname} onClick={() => navigate(url.href)}/>
+                <div key={url.name}>
+                  {pathname==url.href?
+                    <SecondaryLinkButton href={url.href} className={""}>
+                      {url.name}
+                    </SecondaryLinkButton> :
+                    <TertiaryLinkButton href={url.href} className={""} onClick={() => navigate(url.href)}>
+                      {url.name}
+                    </TertiaryLinkButton>}
                 </div>
               )}
+              {pathname=="/contact"?
+                <SecondaryLinkButton key={"-1"} href="/contact" className={" block md:hidden"}>
+                  Contact
+                </SecondaryLinkButton> :
+                <TertiaryLinkButton key={"-1"} href="/contact" className={" block md:hidden"}>
+                  Contact
+                </TertiaryLinkButton>}
             </div>
           </div>
         </div>
