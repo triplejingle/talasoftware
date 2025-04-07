@@ -1,11 +1,12 @@
 'use client'
-import {PrimaryButton} from "@/components/uicomponents/buttons/PrimaryButtons";
+
 import React from "react";
-import Link from "next/link";
+
 import {H1, H2} from "@/components/content/HTag";
 import {P} from "@/components/content/PTag";
 import {PrimaryLinkButton} from "@/components/uicomponents/buttons/LinkButton";
-
+import Image from "next/image";
+import notes from "../../source/notes.avif"
 export default function Page() {
   return <div className="overflow-hidden  pt-20  text-white">
     <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -18,8 +19,6 @@ export default function Page() {
             <P className={"mb-2  "}>
               Het begint allemaal met een idee! Heb je een briljant plan en wil je weten of het haalbaar is? Ik
               denk met je mee, daag je uit en kijk hoe ik jouw idee kan omzetten in iets geweldigs.
-
-
             </P>
             <PrimaryLinkButton className={"mt-8"} href={"/services"}>
               Wat is er mogelijk?
@@ -47,12 +46,13 @@ export default function Page() {
         </div>
 
         <div className={"hidden sm:block"}>
-          <img
-            alt="Product screenshot"
-            src="https://plus.unsplash.com/premium_photo-1661687254326-bcacaa1fa47e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          <Image
+            alt="Notes"
+            src={notes}
             width={2432}
             height={1442}
             className="w-[48rem] max-w-none rounded-full ring-1 shadow-xl ring-neutral-400/10 sm:w-[57rem] md:-ml-4 lg:ml-0 "
+            priority
           />
         </div>
       </div>
