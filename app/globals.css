@@ -1,46 +1,116 @@
 @import 'tailwindcss';
 
 @theme {
-  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
-  --background-image-gradient-conic: conic-gradient(
-    from 180deg at 50% 50%,
-    var(--tw-gradient-stops)
-  );
+    /*--color-primary-50: oklch(0.977 0.013 236.62);*/
+    /*--color-primary-100: oklch(0.951 0.026 236.824);*/
+    /*--color-primary-200: oklch(0.901 0.058 230.902);*/
+    /*--color-primary-300: oklch(0.828 0.111 230.318);*/
+    /*--color-primary-400: oklch(0.746 0.16 232.661);*/
+    /*--color-primary-500: oklch(0.685 0.169 237.323);*/
+    /*--color-primary-600: oklch(0.588 0.158 241.966);*/
+    /*--color-primary-700: oklch(0.5 0.134 242.749);*/
+    /*--color-primary-800: oklch(0.443 0.11 240.79);*/
+    /*--color-primary-900: oklch(0.391 0.09 240.876);*/
+    /*--color-primary-950: oklch(0.293 0.066 243.157);*/
+
+    --color-primary-50: oklch(0.987 0.022 95.277);
+    --color-primary-100: oklch(0.962 0.059 95.617);
+    --color-primary-200: oklch(0.924 0.12 95.746);
+    --color-primary-300: oklch(0.879 0.169 91.605);
+    --color-primary-400: oklch(0.828 0.189 84.429);
+    --color-primary-500: oklch(0.769 0.188 70.08);
+    --color-primary-600: oklch(0.666 0.179 58.318);
+    --color-primary-700: oklch(0.555 0.163 48.998);
+    --color-primary-800: oklch(0.473 0.137 46.201);
+    --color-primary-900: oklch(0.414 0.112 45.904);
+    --color-primary-950: oklch(0.279 0.077 45.635);
+
+    --color-neutral-50: oklch(0.985 0.002 247.839);
+    --color-neutral-100: oklch(0.967 0.003 264.542);
+    --color-neutral-200: oklch(0.928 0.006 264.531);
+    --color-neutral-300: oklch(0.872 0.01 258.338);
+    --color-neutral-400: oklch(0.707 0.022 261.325);
+    --color-neutral-500: oklch(0.551 0.027 264.364);
+    --color-neutral-600: oklch(0.446 0.03 256.802);
+    --color-neutral-700: oklch(0.373 0.034 259.733);
+    --color-neutral-800: oklch(0.278 0.033 256.848);
+    --color-neutral-900: oklch(0.21 0.034 264.665);
+    --color-neutral-950: oklch(0.13 0.028 261.692);
+
+    --color-link-50: oklch(0.977 0.013 236.62);
+    --color-link-100: oklch(0.951 0.026 236.824);
+    --color-link-200: oklch(0.901 0.058 230.902);
+    --color-link-300: oklch(0.828 0.111 230.318);
+    --color-link-400: oklch(0.746 0.16 232.661);
+    --color-link-500: oklch(0.685 0.169 237.323);
+    --color-link-600: oklch(0.588 0.158 241.966);
+    --color-link-700: oklch(0.5 0.134 242.749);
+    --color-link-800: oklch(0.443 0.11 240.79);
+    --color-link-900: oklch(0.391 0.09 240.876);
+    --color-link-950: oklch(0.293 0.066 243.157);
+
+    --color-action-50: oklch(0.987 0.026 102.212);
+    --color-action-100: oklch(0.973 0.071 103.193);
+    --color-action-200: oklch(0.945 0.129 101.54);
+    --color-action-300: oklch(0.905 0.182 98.111);
+    --color-action-400: oklch(0.852 0.199 91.936);
+    --color-action-500: oklch(0.795 0.184 86.047);
+    --color-action-600: oklch(0.681 0.162 75.834);
+    --color-action-700: oklch(0.554 0.135 66.442);
+    --color-action-800: oklch(0.476 0.114 61.907);
+    --color-action-900: oklch(0.421 0.095 57.708);
+    --color-action-950: oklch(0.286 0.066 53.813);
+
+    --color-warning-50: oklch(0.987 0.026 102.212);
+    --color-warning-100: oklch(0.973 0.071 103.193);
+    --color-warning-200: oklch(0.945 0.129 101.54);
+    --color-warning-300: oklch(0.905 0.182 98.111);
+    --color-warning-400: oklch(0.852 0.199 91.936);
+    --color-warning-500: oklch(0.795 0.184 86.047);
+    --color-warning-600: oklch(0.681 0.162 75.834);
+    --color-warning-700: oklch(0.554 0.135 66.442);
+    --color-warning-800: oklch(0.476 0.114 61.907);
+    --color-warning-900: oklch(0.421 0.095 57.708);
+    --color-warning-950: oklch(0.286 0.066 53.813);
+
+    --color-destructive-50: oklch(0.971 0.013 17.38);
+    --color-destructive-100: oklch(0.936 0.032 17.717);
+    --color-destructive-200: oklch(0.885 0.062 18.334);
+    --color-destructive-300: oklch(0.808 0.114 19.571);
+    --color-destructive-400: oklch(0.704 0.191 22.216);
+    --color-destructive-500: oklch(0.637 0.237 25.331);
+    --color-destructive-600: oklch(0.577 0.245 27.325);
+    --color-destructive-700: oklch(0.505 0.213 27.518);
+    --color-destructive-800: oklch(0.444 0.177 26.899);
+    --color-destructive-900: oklch(0.396 0.141 25.723);
+    --color-destructive-950: oklch(0.258 0.092 26.042);
+
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
+    --text-6xl: 3.75rem;
+    --text-6xl--line-height: 1;
+    --text-7xl: 4.5rem;
+    --text-7xl--line-height: 1;
+    --text-8xl: 6rem;
+    --text-8xl--line-height: 1;
+    --text-9xl: 8rem;
+    --text-9xl--line-height: 1;
 }
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
 
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
-}
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-
-}

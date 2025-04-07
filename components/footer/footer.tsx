@@ -13,15 +13,15 @@ export default function Footer() {
         </div>
       </div>
 
-      <hr className="my-10 border-gray-200 dark:border-gray-700"/>
+      <hr className="my-10 border-neutral-200 dark:border-neutral-700"/>
 
       <div className="flex flex-col items-center sm:flex-row sm:justify-between">
-        <p className="text-sm text-gray-500">© Copyright 2021. All Rights Reserved.</p>
+        <p className="text-sm text-neutral-500">© Copyright 2021. All Rights Reserved.</p>
 
         <div className="flex mt-3 -mx-2 sm:mt-0">
 
           <a href="/privacy"
-             className="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300"
+             className="mx-2 text-sm text-neutral-500 transition-colors duration-300 hover:text-neutral-500 dark:hover:text-neutral-300"
              aria-label="Reddit"> Privacy & cookie beleid </a>
 
 

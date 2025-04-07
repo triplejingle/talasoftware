@@ -150,7 +150,7 @@ export default function Page() {
     <div className={"flex flex-row justify-center"}>
       <h1 className={" text-3xl font-bold tracking-tight text-black sm:text-6xl"}>Skills</h1>
     </div>
-    {/*<SkillsSection skills={skills} sectionTitle={"Architecture"}/>*/}
+    {/*<SkillsSection skillsoldpage={skillsoldpage} sectionTitle={"Architecture"}/>*/}
     <SkillsSection skills={backendSkills} sectionTitle={"Backend development"}/>
     <SkillsSection skills={frontendSkills} sectionTitle={"Frontend development"}/>
     <SkillsSection skills={databaseSkills} sectionTitle={"Database"}/>
@@ -193,21 +193,21 @@ function Skills(props: SkillsProps) {
         <div className="flex justify-center items-center space-x-3">
           <h3 className="truncate text-sm font-medium text-black">{props.skill.skill}</h3>
         </div>
-        <p className="flex justify-center mt-1 truncate text-sm text-wrap text-gray-300">{props.skill.experience}</p>
+        <p className="flex justify-center mt-1 truncate text-sm text-wrap text-neutral-300">{props.skill.experience}</p>
       </div>
 
     </div>
     <div>
-      <div className="-mt-px flex divide-x divide-gray-200">
+      <div className="-mt-px flex divide-x divide-neutral-200">
         <div className="-ml-px flex w-0 flex-1">
           <div
-            className=" flex flex-row flex-wrap inline-flex w-0 flex-1 items-center justify-center gap-x-3 rounded-br-lg border border-transparent py-4 text-sm font-semibold text-gray-900">
+            className=" flex flex-row flex-wrap inline-flex w-0 flex-1 items-center justify-center gap-x-3 rounded-br-lg border border-transparent py-4 text-sm font-semibold text-neutral-900">
             {[0, 1, 2, 3, 4].map((rating) => (
               <StarIcon
                 key={rating}
                 aria-hidden="true"
                 className={classNames(
-                  props.skill.rating > rating ? 'text-yellow-400' : 'text-gray-200',
+                  props.skill.rating > rating ? 'text-yellow-400' : 'text-neutral-200',
                   'h-3 w-3 sm:h-5 sm:w-5 shrink-0',
                 )}
               />

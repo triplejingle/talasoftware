@@ -10,7 +10,7 @@ export interface ButtonProps {
 export function BaseButton(props:ButtonProps) {
   return <button disabled={props.disabled ? props.disabled : false}
                  onClick={() => props.onClick ? props.onClick() : undefined}
-                 className={props.className}>
+                 className={"text-lg md:text-xl "+props.className}>
     {props.children}
   </button>;
 }

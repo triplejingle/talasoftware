@@ -28,8 +28,8 @@ export default function AboutMeSection() {
     <div className=" pb-24 sm:pb-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="flex justify-center text-4xl font-bold tracking-tight text-black sm:text-6xl">About me</h2>
-          <p className="mt-6 text-lg leading-8 text-black">
+          <h2 className="flex justify-center text-4xl font-bold tracking-tight  sm:text-6xl">About me</h2>
+          <p className="mt-6 text-lg leading-8 ">
            My name is Djimaro Talahatu. I was born and raised in Apeldoorn and i still live here.
             <br/>
             My hobbies are:
@@ -37,11 +37,11 @@ export default function AboutMeSection() {
           <ul role="list" className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
             {files.map((file,i) => (
               <li  key={i+file.source}>
-                <div className="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-yellow-500">
+                <div className="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg bg-neutral-100 focus-within:ring-2 focus-within:ring-yellow-500">
                   <Image  alt="" src={file.source} width={200} height={200} className="pointer-events-none object-cover " />
                 </div>
-                <p className="pointer-events-none  mt-2 block  text-sm font-medium text-black"> {file.title}</p>
-                {file.demoHref?<a className={"mt-2 block  text-sm font-medium text-gray-500"} href={file.demoHref}>
+                <p className="pointer-events-none  mt-2 block  text-sm font-medium "> {file.title}</p>
+                {file.demoHref?<a className={"mt-2 block  text-sm font-medium text-neutral-500"} href={file.demoHref}>
                   {file.demoDescription}
                 </a>:<></>}
               </li>

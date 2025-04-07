@@ -19,19 +19,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" >
-      <body className={inter.className +" bg-gray-100"}>
-        <div className={" flex flex-col justify-between  font-sans"}>
-          {/*<div className={" "}>*/}
-            <NavBar/>
-            <div className={"flex justify-center pt-20 "}>
-            {children}
-            </div>
-          {/*</div>*/}
+      <body className={inter.className +" bg-[url(../source/servicesapi.png)] bg-primary-700 bg-blend-multiply"}>
+      <div className={" flex flex-col justify-between font-sans "}>
 
-          <div  className={"w-full  "}>
-            {/*<Footer/>*/}
-          </div>
+
+        {/*<div className={" "}>*/}
+        <NavBar/>
+
+        <div>
+          {children}
         </div>
+        {/*</div>*/}
+
+        <div className={"w-full  "}>
+          {/*<Footer/>*/}
+        </div>
+      </div>
       </body>
     </html>
   );

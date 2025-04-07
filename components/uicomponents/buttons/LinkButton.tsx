@@ -7,7 +7,7 @@ export interface LinkButtonProps extends ButtonProps{
   href:string;
 }
 export function PrimaryLinkButton(properties:LinkButtonProps) {
-  const props = {...properties, className: "text-xl bg-amber-500 hover:bg-amber-700 text-white  rounded-full px-4 py-2 "+properties.className};
+  const props = {...properties, className: " bg-primary-500 hover:bg-primary-600 text-white rounded-full px-4 py-2 "+properties.className};
   const router = useRouter();
   function navigate(href: string) {
     router.push(href);
@@ -20,7 +20,7 @@ export function PrimaryLinkButton(properties:LinkButtonProps) {
 }
 
 export function SecondaryLinkButton(properties:LinkButtonProps) {
-  const props = {...properties, className: "text-xl text-amber-500 border-b-4 border-amber-500 "+properties.className};
+  const props = {...properties, className: "text-primary-500  border-primary-500 "+properties.className};
 
   const router = useRouter();
   function navigate(href: string) {
@@ -34,7 +34,7 @@ export function SecondaryLinkButton(properties:LinkButtonProps) {
 }
 
 export function TertiaryLinkButton(properties:LinkButtonProps) {
-  const props = {...properties, className: "text-xl text-gray-500 hover:text-amber-500 "+properties.className};
+  const props = {...properties, className: "text-neutral-500 hover:text-primary-500 "+properties.className};
   const router = useRouter();
   function navigate(href: string) {
     router.push(href);

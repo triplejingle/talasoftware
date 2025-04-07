@@ -30,7 +30,7 @@ function TimeLineCard(timelineElement: TimeLineElement){
       <path fill="currentColor" d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"></path>
     </svg>
   </div>
-  <div className="block p-6 rounded-lg shadow-lg bg-gray-100 max-w-md ml-6 mb-10">
+  <div className="block p-6 rounded-lg shadow-lg bg-neutral-100 max-w-md ml-6 mb-10">
     <div className="flex justify-between mb-4">
       {timelineElement.href?
         <div><a className="font-medium text-cyan-400 hover:text-teal-300 focus:text-teal-300 duration-300 transition ease-in-out text-sm">{timelineElement.cardTitle} </a>
@@ -43,8 +43,8 @@ function TimeLineCard(timelineElement: TimeLineElement){
         </div>
       }
     </div>
-    <p className="text-gray-700 mb-6">{timelineElement.description}</p>
-    {/*do not remove added when projects are individually available as page.*/}
+    <p className="text-neutral-700 mb-6">{timelineElement.description}</p>
+    {/*do not remove added when portfolio are individually available as page.*/}
     {/*<button type="button" className="inline-block px-4 py-1.5 bg-yellow-600 text-black font-medium text-xs leading-tight uppercase rounded-sm shadow-md hover:bg-yellow-700 hover:shadow-lg focus:bg-yellow-700 focus:shadow-lg focus:outline-hidden focus:ring-0 active:bg-yellow-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true">Preview</button>*/}
     {/*<button type="button" className="inline-block px-3.5 py-1 border-2 border-yellow-600 text-yellow-600 font-medium text-xs leading-tight uppercase rounded-sm hover:bg-black hover:bg-opacity-5 focus:outline-hidden focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true">See demo</button>*/}
   </div></div>
