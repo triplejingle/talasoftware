@@ -1,4 +1,4 @@
-import {VerticalTimeLine} from "@/components/uicomponents/TimeLine";
+import {VerticalTimeLine} from "@/components/TimeLine";
 import AboutMeSection from "@/app/contact/AboutMeSection";
 
 export default function Page(){
