@@ -24,12 +24,10 @@ export default function Home() {
            Ik ben Djimaro Talahatu
         </P>
         <div className={"flex justify-around font-bold "}>
-          <div className={"flex "}> <H1 >Freelance</H1>
-            <H1 >         &nbsp;
-              Software developer</H1>
-
-
-          </div>
+          <H1 >Freelance </H1>
+        </div>
+        <div className={"flex justify-around"}>
+        <   H1 >Software developer</H1>
         </div>
         <div className={"flex justify-around my-20 "}>
           <PrimaryLinkButton href={"/softwaredevelopment"}>
