@@ -51,6 +51,7 @@ export default function Home() {
                   width={158}
                   height={48}
                   className="max-h-12 w-full object-contain "
+                  priority
                 />
               </Link>
               <Link href={"https://trinitisolutions.nl/"} className={"col-span-2 lg:col-span-1 "}>
@@ -60,6 +61,7 @@ export default function Home() {
                 width={158}
                 height={48}
                 className="max-h-12 w-full object-contain"
+                priority
               />
               </Link>
               <Link href={"https://www.tennet.eu/nl"} className={"col-span-2 lg:col-span-1 "}>
@@ -69,6 +71,7 @@ export default function Home() {
                 width={158}
                 height={48}
                 className=" max-h-12 w-full object-contain"
+                priority
               />
               </Link>
               <Link href={"https://www.thinkproject.com/"} className={"col-span-2 lg:col-span-1 "}>
@@ -78,6 +81,7 @@ export default function Home() {
                   width={158}
                   height={48}
                   className="max-h-12 w-full object-contain"
+                  priority
                 />
               </Link>
               <Link href={"https://smartrobot.solutions/"} className={"col-span-2 lg:col-span-1 "}>
@@ -87,6 +91,7 @@ export default function Home() {
                   width={158}
                   height={48}
                   className=" max-h-12 w-full object-contain "
+                  priority
                 />
               </Link>
               {/*<div className={"col-span-2 max-h-12 w-full object-contain lg:col-span-1"}>*/}
@@ -99,6 +104,7 @@ export default function Home() {
                   width={158}
                   height={48}
                   className="max-h-12 w-full object-contain "
+                  priority
                 />
               </Link>
 
