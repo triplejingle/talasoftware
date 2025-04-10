@@ -1,4 +1,4 @@
-import {VerticalTimeLine} from "@/components/TimeLine";
+'use client'
 import {PrimaryLinkButton} from "@/components/uicomponents/buttons/LinkButton";
 import React from "react";
 
