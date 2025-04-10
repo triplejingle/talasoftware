@@ -154,7 +154,7 @@ export default function Page() {
                 className="inset-shadow-top shadow-bot  bg-primary-700/80  block w-full rounded-xl border-0 px-3.5 py-2  shadow-xs  placeholder:text-primary-400 sm:text-xl sm:leading-6"
                 {...register("email")}
               />
-              {errors.email ? <p className="text-red-500 text-xs italic">Voer hier je email in.</p> : <></>}
+              {errors.email ? <p className="py-3 text-red-500 text-xs italic">Voer hier je email in.</p> : <p className={"py-3 text-xs"}> &nbsp;</p>}
             </div>
           </div>
 
@@ -169,7 +169,7 @@ export default function Page() {
                 className="inset-shadow-top shadow-bot  bg-primary-700/80 block w-full rounded-xl border-0 px-3.5 py-2  placeholder:text-primary-400  sm:text-xl sm:leading-6 "
                 {...register("message")}
               />
-              {errors.message ? <p className="text-red-500 text-xs italic">Voer hier je bericht in.</p> : <></>}
+              {errors.message ? <p className="py-3 text-red-500 text-xs italic">Voer hier je bericht in.</p> : <p className={"py-3 text-xs"}> &nbsp;</p>}
             </div>
           </div>
           {/*<Field className="flex gap-x-4 sm:col-span-2">*/}
