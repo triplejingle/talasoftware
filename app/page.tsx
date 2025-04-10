@@ -3,19 +3,19 @@
 import {P} from "@/components/content/PTag";
 import {H1} from "@/components/content/HTag";
 import {PrimaryLinkButton} from "@/components/uicomponents/buttons/LinkButton";
-import triniti from "../source/trinitsolutions.webp"
+import triniti from "../public/trinitsolutions.webp"
 import Image from "next/image"
-import dotoffice from "../source/dotoffice.png"
-import thinkproject from "../source/thinkproject.png"
-import smartrobotsolutions from "../source/smartrobotsolutions.png"
-import vattenfal from "../source/vattenfal.svg";
-import tennet from "@/source/tennet.svg";
+import dotoffice from "../public/dotoffice.png"
+
+import thinkproject from "../public/thinkproject.png"
+import smartrobotsolutions from "../public/smartrobotsolutions.png"
+import vattenfal from "../public/vattenfal.svg";
+import tennet from "../public/tennet.svg";
 import React from "react";
 import Link from "next/link";
 
 export default function Home() {
-  return (
-    <div className={" pt-20 h-full pb-120 "}>
+  return ( <div className={" pt-20 h-full pb-120 "}>
       <div className={"text-white "}>
         <P className={"flex justify-around md:flex md:justify-around text-white mb-1"}>
           Hi,
@@ -27,9 +27,9 @@ export default function Home() {
           <H1 >Freelance </H1>
         </div>
         <div className={"flex justify-around"}>
-        <   H1 >Software developer</H1>
+        < H1 className={"flex justify-around"}>Software developer </H1>
         </div>
-        <div className={"flex justify-around my-20 "}>
+        <div className={" flex justify-around my-4 "}>
           <PrimaryLinkButton href={"/softwaredevelopment"}>
             Software developer nodig?
           </PrimaryLinkButton>

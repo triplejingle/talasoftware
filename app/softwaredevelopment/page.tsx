@@ -6,7 +6,7 @@ import {H1, H2} from "@/components/content/HTag";
 import {P} from "@/components/content/PTag";
 import {PrimaryLinkButton} from "@/components/uicomponents/buttons/LinkButton";
 import Image from "next/image";
-import notes from "../../source/notes.avif"
+import notes from "../../public/notes.avif"
 export default function Page() {
   return <div className="overflow-hidden  pt-20  text-white">
     <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -20,7 +20,7 @@ export default function Page() {
               Het begint allemaal met een idee! Heb je een briljant plan en wil je weten of het haalbaar is? Ik
               denk met je mee, daag je uit en kijk hoe ik jouw idee kan omzetten in iets geweldigs.
             </P>
-            <PrimaryLinkButton className={"mt-8"} href={"/services"}>
+            <PrimaryLinkButton className={"mt-1 mb-4"} href={"/services"}>
               Wat is er mogelijk?
             </PrimaryLinkButton>
             <br/>

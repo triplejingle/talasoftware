@@ -33,21 +33,21 @@ export function NavBarbutton(props: NavBarButton){
    </Link>}</>
 }
 
-export function PrimaryButton(properties:ButtonProps) {
+export function PrimaryActionButton(properties:ButtonProps) {
   const props = {...properties, className:" bg-action-500 hover:bg-action-600 text-white rounded-full "+properties.className};
   return <BaseButton {...props}>
             {props.children}
         </BaseButton>
 }
 
-export function SecondaryButton(properties:ButtonProps) {
+export function SecondaryActionButton(properties:ButtonProps) {
   const props = {...properties, className:" text-action-500 border-action-300 border-2 rounded-full "+properties.className};
   return <BaseButton {...props}>
           {props.children}
         </BaseButton>
 }
 
-export function TertiaryButton(properties:ButtonProps) {
+export function TertiaryActionButton(properties:ButtonProps) {
   const props = {...properties, className:"  text-neutral-500 "+properties.className};
   return <BaseButton  {...props}>
     {props.children}

@@ -146,8 +146,14 @@ export default function Page() {
       </PrimaryLinkButton>
     </div>
   </div>
-
-</div>
+    {/*⚙️ De tools waar ik mee werk*/}
+    {/*👍 Wat ik gebruik	🧰 Voorbeelden*/}
+    {/*Voorkant van je site (frontend)	React, Next.js*/}
+    {/*Achterkant (backend)	C#/.NET*/}
+    {/*Databases	PostgreSQL*/}
+    {/*Cloud & hosting	Microsoft Azure*/}
+    {/*Extra’s*/}
+  </div>
 }
 
 function WaveUp() {

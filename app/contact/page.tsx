@@ -9,7 +9,7 @@ import {Bounce, toast, ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import {H2} from "@/components/content/HTag";
 import {LabelTag} from "@/components/content/LabelTag";
-import {PrimaryButton} from "@/components/uicomponents/buttons/PrimaryButtons";
+import {PrimaryActionButton} from "@/components/uicomponents/buttons/ActionButton";
 import {BuildingOffice2Icon} from "@heroicons/react/16/solid";
 import {P} from "@/components/content/PTag";
 import {BuildingLibraryIcon, CurrencyEuroIcon, EnvelopeIcon, PhoneIcon} from "@heroicons/react/24/outline";
@@ -123,7 +123,7 @@ export default function Page() {
                 id="firstName"
                 type="text"
                 autoComplete="given-name"
-                className="block w-full rounded-xl border-0 px-3.5 py-2  shadow-xs ring-1 ring-inset ring-primary-300 placeholder:text-primary-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-xl sm:leading-6"
+                className="inset-shadow-top shadow-bot  bg-primary-700/80 block w-full rounded-xl border-0 px-3.5 py-2  shadow-xs  placeholder:text-primary-400 sm:text-xl sm:leading-6"
               />
             </div>
           </div>
@@ -137,7 +137,7 @@ export default function Page() {
                 id="lastName"
                 type="text"
                 autoComplete="family-name"
-                className="block w-full rounded-xl border-0 px-3.5 py-2 shadow-xs ring-1 ring-inset ring-primary-300 placeholder:text-primary-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-xl sm:leading-6"
+                className="inset-shadow-top shadow-bot  bg-primary-700/80  block w-full rounded-xl border-0 px-3.5 py-2  shadow-xs  placeholder:text-primary-400 sm:text-xl sm:leading-6"
               />
             </div>
           </div>
@@ -146,19 +146,19 @@ export default function Page() {
             <LabelTag htmlFor="email" className="block ">
               Email *
             </LabelTag>
-            <div className="mt-2.5">
+            <div className="mt-2.5 ">
               <input
                 id="email"
                 type="email"
                 autoComplete="email"
-                className="block w-full rounded-xl border-0 px-3.5 py-2  shadow-xs ring-1 ring-inset ring-primary-300 placeholder:text-primary-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-xl sm:leading-6"
+                className="inset-shadow-top shadow-bot  bg-primary-700/80  block w-full rounded-xl border-0 px-3.5 py-2  shadow-xs  placeholder:text-primary-400 sm:text-xl sm:leading-6"
                 {...register("email")}
               />
               {errors.email ? <p className="text-red-500 text-xs italic">Voer hier je email in.</p> : <></>}
             </div>
           </div>
 
-          <div className="sm:col-span-2">
+          <div className="sm:col-span-2 ">
             <LabelTag htmlFor="message" className="block ">
               Bericht *
             </LabelTag>
@@ -166,7 +166,7 @@ export default function Page() {
               <textarea
                 id="message"
                 rows={4}
-                className="block w-full rounded-xl border-0 px-3.5 py-2  shadow-xs ring-1 ring-inset ring-primary-300 placeholder:text-primary-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-xl sm:leading-6"
+                className="inset-shadow-top shadow-bot  bg-primary-700/80 block w-full rounded-xl border-0 px-3.5 py-2  placeholder:text-primary-400  sm:text-xl sm:leading-6 "
                 {...register("message")}
               />
               {errors.message ? <p className="text-red-500 text-xs italic">Voer hier je bericht in.</p> : <></>}
@@ -198,13 +198,13 @@ export default function Page() {
         </div>
         <div className="mt-10 flex justify-center py-10 sm:px-0 sm:justify-end">
           {!isSubmitted ?
-            <PrimaryButton disabled={isSubmitted} className={" px-10 py-3 text-center   shadow-xs"}>
+            <PrimaryActionButton disabled={isSubmitted} className={" px-10 py-3 text-center   shadow-xs"}>
               Versturen
-            </PrimaryButton>
+            </PrimaryActionButton>
             :
-            <PrimaryButton disabled={!isDirty} className={"  px-10 py-3 text-center   shadow-xs"}>
+            <PrimaryActionButton disabled={!isDirty} className={"  px-10 py-3 text-center   shadow-xs"}>
               Opnieuw versturen
-            </PrimaryButton>
+            </PrimaryActionButton>
           }
         </div>
       </form>

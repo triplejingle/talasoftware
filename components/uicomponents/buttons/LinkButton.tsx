@@ -7,7 +7,7 @@ export interface LinkButtonProps extends ButtonProps{
   href:string;
 }
 export function PrimaryLinkButton(properties:LinkButtonProps) {
-  const props = {...properties, className: " bg-primary-500 hover:bg-primary-600 text-white rounded-full px-4 py-2 "+properties.className};
+  const props = {...properties, className: " bg-primary-500 hover:bg-primary-400 text-white rounded-full px-4 py-2 "+properties.className};
   const router = useRouter();
   function navigate(href: string) {
     router.push(href);
