@@ -24,10 +24,10 @@ export default function RootLayout({
       <meta name="description"
             content="TALA Software helpt organisaties met slimme, op maat gemaakte softwareoplossingen. Efficiënt, schaalbaar en gebruiksvriendelijk."/>
     </head>
-    <body className={inter.className + " bg-[url(../public/servicesapi2.png)] bg-primary-600 bg-blend-multiply"}>
+    {/*<body className={inter.className + " bg-[url(../public/servicesapi2.png)] bg-primary-600 bg-blend-multiply"}>*/}
+    <body className={inter.className}>
     <title>TALA Software </title>
     <div className={"flex flex-col justify-between font-sans "}>
-      <NavBar/>
       <div>
         {children}
       </div>

@@ -6,21 +6,25 @@ import {H2} from "@/components/content/HTag";
 import {PrimaryLinkButton} from "@/components/uicomponents/buttons/LinkButton";
 export default function Page() {
   //onderstaande services zijn geordent op basis van hoe moeilijk ze zijn.
-  const services = ["api development & integration, full stack development, software architecture & design, saas development, custom software development, tech consulting & advisory"]
 
   return <div className="">
     <div className={"pt-20 pb-40"}>
       <div className={"text-white"}>
-        <LabelTag className={"flex justify-around mb-40"}>🚀 Wat ik voor je kan betekenen</LabelTag>
+        <div className={"flex justify-around mb-40 leading-6 font-semibold text-4xl"}>Welke problemen ik oplos</div>
         <div className={"flex justify-around mb-20 "}>
           <div className={"px-6 sm:w-1/2"}>
-            <H2 className={"mb-10 font-bold"}>🔗 API-ontwikkeling & koppelingen</H2>
-            <P className={"lg:pr-8"}>Ben je appels met peren aan het verbinden? Ik regel dat voor je. Ik bouw robuuste
-              APIs met C# en .NET die
-              vlekkeloos praten met andere systemen.
-              Denk aan REST of integraties met externe tools zoals Stripe of je eigen CRM — gehost in de Azure-cloud
-              voor
-              stabiliteit en schaalbaarheid..</P>
+            <H2 className={"mb-10 font-bold"}>Handmatig werk kost tijd en zorgt voor fouten.</H2>
+            <P className={"lg:pr-8"}>
+              Er moet veel informatie worden ingevoerd. Gegevens worden handmatig overgetypt van het ene systeem naar het andere.
+              Zodra alles klaar lijkt, ontdek je een fout. Dan denk je: "Zijn er misschien nog meer fouten gemaakt?"
+
+              Nog een keer alles nalopen, vergelijken en corrigeren.
+              Niet omdat het waarde toevoegt, maar omdat het moet.
+              Dat kost tijd, energie en zorgt voor frustratie.
+
+              Dat kan slimmer. Ik automatiseer terugkerende werkzaamheden met slimme software.
+              Zo worden gegevens automatisch verwerkt, voorkom je fouten en houd je meer tijd over voor werkzaamheden die echt waarde toevoegen aan je bedrijf.
+            </P>
           </div>
         </div>
       </div>
@@ -30,110 +34,76 @@ export default function Page() {
       <WaveUp/>
       <div className={"flex justify-around bg-neutral-200 py-30 -mt-2"}>
         <div className={"px-6 sm:w-1/2"}>
-          <H2 className={"mb-10 font-bold"}>💻 Full Stack Development</H2>
+          <H2 className={"mb-10 font-bold"}>Je hoort één administratie te hebben, maar hebt er twee of meer</H2>
           <P className={"lg:pr-8"}>
-            Frontend, backend? Ik doe het allebei! Met React & Next.js bouw ik snelle, gebruiksvriendelijke
-            interfaces,
-            en onder de motorkap draait alles op een solide .NET-backend met een betrouwbare database.
-            Alles draait in de cloud via Azure — snel, schaalbaar en future-proof.
+
+            Veel bedrijven voeren dezelfde informatie in meerdere systemen in.
+            Dat kost niet alleen tijd, maar vergroot ook de kans op fouten.
+            Door systemen met elkaar te verbinden zorg ik ervoor dat gegevens automatisch worden uitgewisseld en altijd up-to-date blijven.
           </P>
         </div>
       </div>
       <WaveDown/>
     </div>
 
-    {/*<div className={"flex justify-around my-30"}>*/
-    }
-    {/*  <div>a</div>*/
-    }
-    {/*  <div className={"w-1/2"}>*/
-    }
-    {/*    <H2 className={"mb-10"}>🧱 Software-architectuur & ontwerp</H2>*/
-  }
-  {/*    <P>Een goed begin is het halve werk, vooral in software. Ik help je bij het opzetten van een slimme architectuur: van monoliet tot microservices.*/
-  }
-  {/*      Gebouwd met C#, gehost op Azure en ontworpen om mee te groeien met jouw ambities.*/
-  }
-  {/*    </P>*/
-  }
-  {/*  </div>*/
-  }
-  {/*</div>*/
-  }
+    <div className={"flex justify-around my-30"}>
 
-  {/*<div className="mt-20">*/
-  }
-  {/*  <WaveUp/>*/
-  }
-  {/*  <div className={"flex justify-around bg-neutral-200 py-20 "}>*/
-  }
-  {/*    <div className={"w-1/2"}>*/
-  }
-  {/*      <H2 className={"mb-10"}>☁️ Software in de cloud</H2>*/
-  }
-  {/*      multitenant?*/
-  }
-  {/*      <P>Wil je jouw eigen SaaS lanceren? I got you. Ik bouw schaalbare SaaS-platformen met Next.js, React en een solide C#-backend.*/
-  }
-  {/*        De data gaat netjes in een gestructureerde PostgreSQL-database. Hosting?*/
-  }
-  {/*        Uiteraard in Azure — veilig, snel en klaar voor groei.</P>*/
-  }
-  {/*    </div>*/
-  }
-  {/*    <div>a</div>*/
-  }
-  {/*  </div>*/
-  }
-  {/*  <WaveDown/>*/
-  }
-  {/*</div>*/
-  }
+      <div className={"w-1/2 text-white"}>
+        <H2 className={"mb-10"}>Belangrijke informatie hoort op één plek beschikbaar te zijn.</H2>
+      <P>Wanneer gegevens verspreid staan over meerdere programma's verlies je tijd met zoeken.
+        Ik help bij het centraliseren van informatie, zodat jij en je team sneller de juiste gegevens kunnen vinden en betere beslissingen kunnen nemen.
+      </P>
+    </div>
+  </div>
 
-  {/*<div className={"flex justify-around py-52 "}>*/}
-  {/*  <PrimaryLinkButton href={"/softwaredevelopment"} className={" py-4 px-32 mt-10"}>*/}
-  {/*    Wat is de eerste stap?*/}
-  {/*  </PrimaryLinkButton>*/}
-  {/*  <div className={"w-1/2"}>*/}
-  {/*    <H2 className={"mb-10 font-bold"}>🧰 Software op maat</H2>*/}
-  {/*    <P>*/}
-  {/*      Heb je iets nodig dat je nergens kunt vinden? Ik maak software volledig op maat. Snel, gebruiksvriendelijk,*/}
-  {/*      en*/}
-  {/*      helemaal afgestemd op jouw bedrijf of workflow.*/}
-  {/*    </P>*/}
-  {/*  </div>*/}
-  {/*</div>*/}
+  <div className="mt-20">
+    <WaveUp/>
+    <div className={"flex justify-around bg-neutral-200 py-20 "}>
+      <div className={"w-1/2"}>
+        <H2 className={"mb-10 font-bold"}>Systemen die niet samenwerken zorgt voor frustratie.</H2>
+        <P>Gebruik je verschillende applicaties die los van elkaar werken?
+          Ik ontwikkel koppelingen en dashboards die alles samenbrengen in één overzichtelijke werkomgeving.
+          Zo krijg je meer inzicht en controle over je processen.</P>
+      </div>
+    </div>
+    <WaveDown/>
+  </div>
+
+  <div className={"flex justify-around py-52  text-white"}>
+    <PrimaryLinkButton href={"/softwaredevelopment"} className={" py-4 px-32 mt-10"}>
+      tmp
+    </PrimaryLinkButton>
+    <div className={"w-1/2"}>
+      <H2 className={"mb-10 font-bold"}>Wat vandaag werkt, moet morgen ook nog passen.</H2>
+      <P>
+        Naarmate je bedrijf groeit, veranderen ook je processen en behoeften.
+        Ik bouw schaalbare softwareoplossingen die kunnen meegroeien met jouw organisatie,
+        zodat je niet steeds opnieuw hoeft te beginnen.
+      </P>
+    </div>
+  </div>
 
 
-  {/*<div className="mt-20">*/
-  }
-  {/*  <WaveUp/>*/
-  }
-  {/*  <div className={"flex justify-around bg-neutral-200 py-20 "}>*/
-  }
-  {/*    <div className={"w-1/2"}>*/
-  }
-  {/*      <H2 className={"mb-10"}>🧠 Hulp & advies bij techniek</H2>*/
-  }
-  {/*      <P>Loop je vast met je huidige software of heb je hulp nodig bij een technisch vraagstuk? Ik kijk met je mee en geef eerlijk en helder advies. Geen moeilijke taal, gewoon duidelijke keuzes.</P>*/
-  }
-  {/*    </div>*/
-  }
-  {/*    <div>a</div>*/
-  }
-  {/*  </div>*/
-  }
-  {/*  <WaveDown/>*/
-  }
-  {/*</div>*/
-  }
+  <div className="mt-20">
+    <WaveUp/>
+    <div className={"flex justify-around bg-neutral-200 py-20 "}>
+      <div className={"w-1/2"}>
+        <H2 className={"mb-10"}>Verouderde software kost meer dan je denkt.</H2>
+        <P>Trage systemen, omslachtige processen en beperkte mogelijkheden remmen de groei van je bedrijf.
+          Ik help met het moderniseren van bestaande software of het ontwikkelen van een toekomstbestendige oplossing die sneller, gebruiksvriendelijker en makkelijker te onderhouden is.
+        </P>
+      </div>
+      <div>a</div>
+    </div>
+    <WaveDown/>
+  </div>
 
   <div className={"text-white"}>
     {/*<WaveUp/>*/}
     <div className={"flex justify-around  pt-20"}>
       <div className={"px-6 sm:w-1/2"}>
         <H2 className={"mb-10 font-bold"}>🤔 Iets in je hoofd?</H2>
-        <P  className={" lg:pr-8"}>Wil je iets bouwen, verbeteren of weten wat er technisch mogelijk is? Stuur een bericht — ik help je
+        <P  className={" lg:pr-8"}>Wil je iets bouwen, verbeteren of weten wat er technisch mogelijk is? Stuur een bericht. Ik help je
           graag
           verder!</P>
 
@@ -180,41 +150,3 @@ function WaveDown() {
     </svg>
   </div>
 }
-
-//hieronder staan voorbeeld services
-// Web Development Services
-// Custom Website Development – Building fully customized websites tailored to specific business needs.
-//   E-commerce Development – Developing online stores using Shopify, WooCommerce, or custom solutions.
-//   Frontend Development – Creating beautiful and responsive user interfaces with React, Vue.js, or Angular.
-//   Backend Development – Building server-side applications with Node.js, Django, Laravel, etc.
-//   Full-Stack Development – End-to-end development, including both frontend and backend systems.
-//   Website Maintenance & Support – Updating and maintaining websites to ensure smooth performance.
-//   Landing Page Development – Creating high-converting landing pages for marketing campaigns.
-//   Web Performance Optimization – Speed and performance improvements (e.g., reducing load time).
-// Mobile App Development Services
-// iOS App Development – Building mobile apps for iPhone/iPad using Swift or Objective-C.
-//   Android App Development – Developing Android applications using Kotlin or Java.
-//   Cross-Platform App Development – Creating apps with Flutter or React Native that work on both iOS and Android.
-//   Mobile App UI/UX Design & Prototyping – Creating intuitive mobile interface designs and wireframes.
-//   App Maintenance & Updates – Keeping apps updated and fixing any issues that arise.
-//   Software Development & Automation
-// Custom Software Development – Designing software solutions tailored to business needs.
-//   API Development & Integration – Building and connecting APIs for smooth data exchange.
-// SaaS (Software-as-a-Service) Development – Creating cloud-based software solutions.
-//   Automation & Scripting – Creating scripts to automate repetitive tasks and workflows.
-//   CRM & ERP Development – Building customer relationship or enterprise management systems.
-//   Cloud & DevOps Services
-// Cloud Infrastructure Setup – Deploying applications on AWS, Google Cloud, or Azure.
-//   CI/CD Pipeline Setup – Automating software deployment and integration using Jenkins, GitHub Actions, etc.
-//   Docker & Kubernetes Services – Containerizing applications for easier scalability.
-//   Server Management & Hosting Setup – Managing hosting, security, and DevOps solutions.
-//   AI & Data Science Services
-// AI/ML Model Development – Implementing artificial intelligence and machine learning models.
-//   Chatbot Development – Creating AI-powered chatbots for customer interaction.
-//   Data Analytics & Visualization – Processing and presenting business data in meaningful ways.
-//   Data Scraping & Web Crawling – Extracting data from websites using Python, Selenium, or Scrapy.
-//   Consulting & Training Services
-// Tech Consulting & Advisory – Providing expert advice on software development strategies.
-//   Code Review & Optimization – Reviewing and improving existing codebases.
-//   Software Architecture & Design – Helping businesses structure scalable software applications.
-//   Developer Training & Mentorship – Teaching coding skillsoldpage or mentoring junior developers.
