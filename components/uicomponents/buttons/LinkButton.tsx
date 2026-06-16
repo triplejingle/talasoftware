@@ -1,10 +1,12 @@
 import React from "react";
-import {ButtonProps} from "@/components/uicomponents/buttons/BaseButton";
 import Link from "next/link";
 
-export interface LinkButtonProps extends ButtonProps{
+export interface LinkButtonProps{
   href?:string
-  onClick?:()=>void
+  onClick?: ()=> void;
+  children: React.ReactNode
+  disabled?:boolean
+  className?:string
 }
 export function PrimaryLinkButton(properties:LinkButtonProps) {
   const props = {...properties, className: "rounded-md bg-link-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-link-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-link-500 "+properties.className};

@@ -11,6 +11,7 @@ import {yupResolver} from "@hookform/resolvers/yup";
 
 import * as yup from "yup";
 import emailjs from "@emailjs/browser";
+import NavBar from "@/components/navbar/NavBar";
 
 interface ContactProps {
   firstName?: string,
@@ -73,7 +74,7 @@ export default function Page() {
           <div className="absolute inset-0 bg-[url('../public/servicesapi2.png')] bg-cover bg-center bg-no-repeat -scale-x-100 bg-primary-400 bg-blend-multiply"></div>
 
         </div>
-
+        <NavBar/>
 
       <div className="relative isolate">
         <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
