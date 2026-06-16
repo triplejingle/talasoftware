@@ -22,7 +22,7 @@ export default function HeroSectionA(props: HeroSectionAProps){
                 className="aspect-1108/632 w-277 bg-linear-to-r from-[#80caff] to-[#4f46e5] opacity-20"
             />
         </div>
-        <div className="mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:px-8 lg:py-40">
+        <div className="mx-auto max-w-7xl px-6 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
             <div className="mx-auto max-w-2xl shrink-0 lg:mx-0 lg:pt-8">
                 <h1 className="mt-10 text-5xl font-semibold tracking-tight text-pretty text-white sm:text-7xl">
                     {props.header}
@@ -61,8 +61,8 @@ export default function HeroSectionA(props: HeroSectionAProps){
                 </div>
             </div>
             <div
-                className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:mt-0 lg:mr-0 lg:ml-5 lg:max-w-none lg:flex-none xl:ml-16">
-                <div className="visible md:hidden max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+                className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:mt-0 lg:mr-0 lg:ml-5 lg:max-w-none lg:flex-none xl:ml-">
+                <div className="visible md:hidden max-w-3xl flex-none sm:max-w-5xl lg:max-w-none ">
                     <Image
                         alt="App screenshot"
                         src={beforeafterexcel}
