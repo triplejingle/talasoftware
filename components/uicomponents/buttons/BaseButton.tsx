@@ -8,9 +8,9 @@ export interface ButtonProps {
 }
 
 export function BaseButton(props:ButtonProps) {
-  return <button disabled={props.disabled ? props.disabled : false}
+  return <a
                  onClick={() => props.onClick ? props.onClick() : undefined}
-                 className={"text-lg md:text-xl "+props.className}>
+                 className={props.className}>
     {props.children}
-  </button>;
+  </a>;
 }

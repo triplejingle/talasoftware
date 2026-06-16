@@ -57,7 +57,7 @@ export default function Page() {
         </div>
       </div>
       <div className={"w-full mb-8 flex justify-center"}>
-        <PrimaryLinkButton href={"/contact"} className={"py-4 px-8 mt-10"} >
+        <PrimaryLinkButton href={"/backupcontact"} className={"py-4 px-8 mt-10"} >
           Laten we over je idee praten!
         </PrimaryLinkButton>
       </div>
@@ -109,7 +109,7 @@ export default function Page() {
   //       </div>
   //     </div>
   //     <div className={"w-full mb-8 flex justify-center"}>
-  //       <Link href={"/contact"}>
+  //       <Link href={"/backupcontact"}>
   //         <PrimaryButton className={"py-4 px-8 mt-10"} >
   //           Vertel ons je idee!
   //         </PrimaryButton>

@@ -4,45 +4,29 @@ import {BaseButton, ButtonProps} from "@/components/uicomponents/buttons/BaseBut
 import Link from "next/link";
 import {useRouter} from "next/navigation";
 export interface LinkButtonProps extends ButtonProps{
-  href:string;
+  href?:string
+  onClick?:()=>void
 }
 export function PrimaryLinkButton(properties:LinkButtonProps) {
-  const props = {...properties, className: " bg-primary-500 hover:bg-primary-400 text-white rounded-full px-4 py-2 "+properties.className};
-  const router = useRouter();
-  function navigate(href: string) {
-    router.push(href);
-  }
-  return <Link href={props.href} onClick={() => navigate(props.href)}>
-    <BaseButton {...props}  >
+  const props = {...properties, className: "rounded-md bg-link-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-link-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-link-500 "+properties.className};
+
+  return <Link {...props} href={props.href?props.href:""}>
       {props.children}
-    </BaseButton>
   </Link>
 }
 
 export function SecondaryLinkButton(properties:LinkButtonProps) {
-  const props = {...properties, className: "text-primary-500  border-primary-500 "+properties.className};
+  const props = {...properties, className: "rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs "+properties.className};
 
-  const router = useRouter();
-  function navigate(href: string) {
-    router.push(href);
-  }
-  return <Link href={props.href} onClick={() => navigate(props.href)}>
-    <BaseButton {...props}  >
+  return <Link {...props} href={props.href?props.href:""}>
       {props.children}
-    </BaseButton>
   </Link>
 }
 
 export function TertiaryLinkButton(properties:LinkButtonProps) {
-  const props = {...properties, className: "text-neutral-500 hover:text-primary-500 "+properties.className};
-  const router = useRouter();
-  function navigate(href: string) {
-    router.push(href);
-  }
-  return <Link href={props.href} onClick={() => navigate(props.href)}>
-    <BaseButton {...props}  >
+  const props = {...properties, className: " shadow-2xl "+properties.className};
+  return <Link {...props} href={props.href?props.href:""}>
       {props.children}
-    </BaseButton>
   </Link>
 }
 

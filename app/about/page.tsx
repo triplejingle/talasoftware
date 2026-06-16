@@ -1,5 +1,5 @@
 import {VerticalTimeLine} from "@/components/TimeLine";
-import AboutMeSection from "@/app/contact/AboutMeSection";
+import AboutMeSection from "@/app/backupcontact/AboutMeSection";
 
 export default function Page(){
 

@@ -111,7 +111,7 @@ export default function Page() {
 
     </div>
     <div className={"flex justify-center py-20"}>
-      <PrimaryLinkButton href={"/contact"} className={"py-4 mt-10"}>
+      <PrimaryLinkButton href={"/backupcontact"} className={"py-4 mt-10"}>
         Vertel me je idee!
       </PrimaryLinkButton>
     </div>
