@@ -325,7 +325,7 @@ export default function Page() {
 
                 {/* probleem */}
                 <div
-                    className="overflow-hidden sm:py-32 mt-32 bg-primary-400 bg-blend-multiply bg-[url(../public/servicesapi2.png)] inset-0 bg-cover bg-center bg-no-repeat">
+                    className="overflow-hidden py-24 sm:py-32 mt-32 bg-primary-400 bg-blend-multiply bg-[url(../public/servicesapi2.png)] inset-0 bg-cover bg-center bg-no-repeat">
                     <FeatureSectionC
                         title={"Wanneer software niet meegroeit, gaat je bedrijf onnodig langzamer werken." }
                         description={"Gegevens staan in Excel, e-mails en losse tools verspreid, waardoor je team\n" +
