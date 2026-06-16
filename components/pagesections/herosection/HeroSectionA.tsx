@@ -1,5 +1,6 @@
 import React from "react";
-
+import beforeafterexcel from '@/public/beforeafterexcel.png'
+import Image from "next/image";
 interface HeroSectionAProps{
     header: string,
     description: string,
@@ -60,14 +61,23 @@ export default function HeroSectionA(props: HeroSectionAProps){
                 </div>
             </div>
             <div
-                className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:mt-0 lg:mr-0 lg:ml-10 lg:max-w-none lg:flex-none xl:ml-32">
-                <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-                    <img
+                className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:mt-0 lg:mr-0 lg:ml-5 lg:max-w-none lg:flex-none xl:ml-16">
+                <div className="visible md:hidden max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+                    <Image
                         alt="App screenshot"
-                        src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
-                        width={2432}
-                        height={1442}
-                        className="w-304 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+                        src={beforeafterexcel}
+                        width={425}
+                        height={800}
+                        className="sm:w-50 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+                    />
+                </div>
+                <div className="invisible md:visible max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+                    <Image
+                        alt="App screenshot"
+                        src={beforeafterexcel}
+                        width={800}
+                        height={1600}
+                        className=" rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
                     />
                 </div>
 

@@ -1,5 +1,7 @@
 import React from "react";
-
+import beforeafteroverzicht from '@/public/beforeafteroverzicht.png'
+import Image from "next/image";
+import beforeafterexcel from "@/public/beforeafterexcel.png";
 
 interface PageSectionCProps{
     title: string,
@@ -34,27 +36,36 @@ export default function FeatureSectionC(props: PageSectionCProps) {
               </div>
           </div>
           <div className="sm:px-6 lg:px-0">
-              <div
-                  className="relative isolate overflow-hidden bg-indigo-500 px-6 pt-8 sm:mx-auto sm:max-w-2xl sm:rounded-3xl sm:pt-16 sm:pr-0 sm:pl-16 lg:mx-0 lg:max-w-none">
+
                   <div
                       aria-hidden="true"
-                      className="absolute -inset-y-px -left-3 -z-10 w-full origin-bottom-left skew-x-[-30deg] bg-indigo-100 opacity-20 ring-1 ring-white ring-inset"
                   />
-                  <div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
-                      <img
-                          alt="Product screenshot"
-                          src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
-                          width={2432}
-                          height={1442}
-                          className="-mb-12 w-228 max-w-none rounded-tl-xl bg-gray-950 ring-1 ring-white/10"
+                  {/*<div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">*/}
+                  <div className="ml-5 visible md:hidden max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+                      <Image
+                          alt="App screenshot"
+                          src={beforeafteroverzicht}
+                          width={425}
+                          height={800}
+                          className="sm:w-50 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
                       />
                   </div>
+
+                  <div className="hidden invisible md:visible md:block max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+                      <Image
+                          alt="App screenshot"
+                          src={beforeafteroverzicht}
+                          width={800}
+                          height={1600}
+                          className=" rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+                      />
+                  </div>
+                  {/*</div>*/}
                   <div
                       aria-hidden="true"
                       className="pointer-events-none absolute inset-0 ring-1 ring-white/10 ring-inset sm:rounded-3xl"
                   />
               </div>
-          </div>
       </div>
   </div>)
 }
