@@ -417,10 +417,10 @@ export default function Page() {
                         </p>
                         <div className="mt-10 flex items-center justify-center gap-x-6">
                             <PrimaryLinkButton
-                                href="#"
+                                href="/contact"
                                 className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
                             >
-                                Aan de slag
+                                Maak nu een afspraak
                             </PrimaryLinkButton>
                             {/*<a href="#" className="text-sm/6 font-semibold text-white">*/}
                             {/*    Learn more <span aria-hidden="true">→</span>*/}
