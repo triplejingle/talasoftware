@@ -11,7 +11,7 @@ export default function FeatureSectionA(props: PageSectionAProps) {
 
   return ( <div className=" relative mx-auto max-w-7xl px-6 lg:px-8">
       <div className="mx-auto max-w-2xl lg:text-center">
-          {props.header && <h2 className="text-base/7 font-semibold text-indigo-400">{props.header}</h2>}
+          {props.header && <h2 className="text-base/7 font-semibold text-amber-400">{props.header}</h2>}
           <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl lg:text-balance">
               {props.title}
           </p>
