@@ -7,6 +7,7 @@ import {P} from "@/components/content/PTag";
 import {PrimaryLinkButton} from "@/components/uicomponents/buttons/LinkButton";
 import Image from "next/image";
 import notes from "../../public/notes.avif"
+
 export default function Page() {
   return <div className="overflow-hidden  pt-20  text-white">
     <div className="mx-auto max-w-7xl px-6 lg:px-8">

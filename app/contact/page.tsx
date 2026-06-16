@@ -1,7 +1,7 @@
 'use client'
 import {BuildingOffice2Icon} from "@heroicons/react/16/solid";
 import {EnvelopeIcon, PhoneIcon} from "@heroicons/react/24/outline";
-import React, {useEffect, useRef, useState} from "react";
+import React, {useRef} from "react";
 import NavBar from "@/components/navbar/NavBar";
 import {PrimaryActionButton} from "@/components/uicomponents/buttons/ActionButton";
 import {LabelTag} from "@/components/content/LabelTag";
@@ -10,6 +10,7 @@ import {SubmitHandler, useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 import emailjs from "@emailjs/browser";
 import * as yup from "yup";
+
 interface ContactProps {
   firstName?: string,
   lastName?: string

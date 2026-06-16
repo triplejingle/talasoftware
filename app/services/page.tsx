@@ -1,9 +1,9 @@
 "use client"
 import React from "react";
-import {LabelTag} from "@/components/content/LabelTag";
 import {P} from "@/components/content/PTag";
 import {H2} from "@/components/content/HTag";
 import {PrimaryLinkButton} from "@/components/uicomponents/buttons/LinkButton";
+
 export default function Page() {
   //onderstaande services zijn geordent op basis van hoe moeilijk ze zijn.
 
