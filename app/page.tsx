@@ -228,7 +228,7 @@ export default function Page() {
                     <PrimaryLinkButton  onClick={scrollTo}>
                         Ontdek hoe je jouw bedrijf efficiënter laat werken
                     </PrimaryLinkButton>
-                    <SecondaryLinkButton href={""}>
+                    <SecondaryLinkButton href={"/contact"}>
                         Contact opnemen <span aria-hidden="true">→</span>
                         {/*gratis scan*/}
                     </SecondaryLinkButton>
