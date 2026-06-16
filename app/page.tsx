@@ -197,7 +197,7 @@ export default function Page() {
             icon: EyeIcon
         }]
 
-    const oplossingRef = useRef(null);
+    const oplossingRef = useRef<HTMLElement>(null);
     const scrollTo = () => {
         oplossingRef.current?.scrollIntoView({ behavior: "smooth" });
     };
