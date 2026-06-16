@@ -2,14 +2,15 @@
 import {BuildingOffice2Icon} from "@heroicons/react/16/solid";
 import {EnvelopeIcon, PhoneIcon} from "@heroicons/react/24/outline";
 import React, {useRef} from "react";
-import NavBar from "@/components/navbar/NavBar";
+import 'react-toastify/dist/ReactToastify.css';
 import {PrimaryActionButton} from "@/components/uicomponents/buttons/ActionButton";
 import {LabelTag} from "@/components/content/LabelTag";
 import {Bounce, toast, ToastContainer} from "react-toastify";
 import {SubmitHandler, useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
-import emailjs from "@emailjs/browser";
+
 import * as yup from "yup";
+import emailjs from "@emailjs/browser";
 
 interface ContactProps {
   firstName?: string,
@@ -43,6 +44,7 @@ export default function Page() {
     defaultValues: {firstName: "", lastName: "", email: "", message: ""}
   })
 
+
   const onSubmit: SubmitHandler<ContactProps> = (data) => {
     emailjs
         .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID!, process.env.NEXT_PUBLIC_TEMPLATE_ID!, form?.current, {
@@ -69,8 +71,10 @@ export default function Page() {
       <div className={"bg-[url('../public/servicesapi2.png')] bg-cover bg-center bg-no-repeat  bg-primary-400 bg-blend-multiply  md:bg-transparent"}>
         <div className="absolute inset-0 overflow-hidden -scale-x-100 ">
           <div className="absolute inset-0 bg-[url('../public/servicesapi2.png')] bg-cover bg-center bg-no-repeat -scale-x-100 bg-primary-400 bg-blend-multiply"></div>
+
         </div>
-        <NavBar/>
+
+
       <div className="relative isolate">
         <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
           <div className="relative px-6 pt-24 pb-20 sm:pt-32 lg:static lg:px-8 lg:py-48">
@@ -133,6 +137,7 @@ export default function Page() {
                         autoComplete="given-name"
                         className="inset-shadow-top shadow-bot  rounded-md bg-primary-700/80 block w-full  border-0 px-3.5 py-2  shadow-xs  placeholder:text-primary-400 sm:text-xl sm:leading-6"
                     />
+                    {errors.firstName ? <p className="py-3 text-red-500 text-xs italic">Voer hier je eerste naam in.</p> : <p className={"py-3 text-xs"}> &nbsp;</p>}
                   </div>
                 </div>
                 <div>
@@ -147,6 +152,7 @@ export default function Page() {
                         autoComplete="family-name"
                         className="inset-shadow-top shadow-bot rounded-md bg-primary-700/80  block w-full border-0 px-3.5 py-2  shadow-xs  placeholder:text-primary-400 sm:text-xl sm:leading-6"
                     />
+                    {errors.lastName ? <p className="py-3 text-red-500 text-xs italic">Voer hier je achternaam in</p> : <p className={"py-3 text-xs"}> &nbsp;</p>}
                   </div>
                 </div>
 
@@ -202,7 +208,7 @@ export default function Page() {
                 {/*    .*/}
                 {/*  </Label>*/}
                 {/*</Field>*/}
-                <ToastContainer/>
+
               </div>
               <div className="mt-10 flex justify-center py-10 sm:px-0 sm:justify-end">
                 {!isSubmitted ?
@@ -216,6 +222,8 @@ export default function Page() {
                 }
               </div>
             </form>
+
+            <ToastContainer/>
           </div>
           {/*<form action="#" method="POST" className="px-6 pt-20 pb-24 sm:pb-32 lg:px-8 lg:py-48">*/}
           {/*  <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">*/}
@@ -303,6 +311,8 @@ export default function Page() {
           {/*</form>*/}
         </div>
       </div>
+
+
       </div>
   )
 }
